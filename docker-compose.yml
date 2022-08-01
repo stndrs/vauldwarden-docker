@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    env_file: vaultwarden.env
+    volumes:
+      - /var/docker/vaultwarden/data:/data
+    restart: unless-stopped
